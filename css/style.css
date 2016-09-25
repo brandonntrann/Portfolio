@@ -1,0 +1,93 @@
+.navbar{
+}
+#Home{
+  background:url("http://eskipaper.com/images/snow-mountain-8.jpg") no-repeat center center;
+  -webkit-background-size: cover
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  padding-top:100px;
+  padding-bottom:100px;
+  margin-bottom:0px;
+  overflow:hidden;
+  height:100vh;
+}
+.site-container{
+  max-width:100%';
+}
+
+#AboutMe{
+  background:gray;
+  padding-top:40px;
+  padding-bottom:40px;
+  height:100vh;
+}
+
+#AboutMe .page-header{
+  font-size:30px;
+}
+
+#AboutMe p{
+  font-size:20px;
+  padding-top:10px;
+  padding-bottom:20px;
+  text-indent:50px;
+}
+  .portrait{
+  border-style:solid;
+  border-width:10px;
+  margin:0 auto;
+}
+
+#Projects{
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+#Projects .page-header{
+  font-size:30px;
+}
+#Projects h3{
+  text-align:center;
+} 
+
+#Kobe{
+  width:100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+/***************MEDIA QUERIES********************/
+/** 
+ * iPad with portrait orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  #Home{
+    height: 1024px;
+  }
+}
+
+/** 
+ * iPad with landscape orientation.
+ */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+  #Home{
+    height: 768px;
+  }
+}
+
+/**
+ * iPhone 5
+ * You can also target devices with aspect ratio.
+ */
+@media screen and (device-aspect-ratio: 40/71) {
+  #Home{
+    height: 500px;
+  }
+}
