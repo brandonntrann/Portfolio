@@ -1,5 +1,12 @@
-.navbar{
+
+.navbar-inverse .navbar-nav>li>a{
+  color:white;
 }
+.navbar-inverse .navbar-nav>li>a.selected{
+  color:red;    /*DONT FORGET TO CHANGE TO BETTER COLOR AND UNDERSTAND HOW THE JQUERY WORKS!*/
+}
+
+/* Home Section */
 #Home{
   background:url("http://eskipaper.com/images/snow-mountain-8.jpg") no-repeat center center;
   -webkit-background-size: cover
@@ -16,11 +23,14 @@
   max-width:100%';
 }
 
+
+/*About Me section*/
+
 #AboutMe{
   background:gray;
   padding-top:40px;
   padding-bottom:40px;
-  height:100vh;
+  min-height:100vh;
 }
 
 #AboutMe .page-header{
@@ -28,20 +38,23 @@
 }
 
 #AboutMe p{
-  font-size:20px;
+  font-size:18px;
   padding-top:10px;
   padding-bottom:20px;
   text-indent:50px;
 }
   .portrait{
+  max-width:100%;
   border-style:solid;
   border-width:10px;
   margin:0 auto;
 }
 
+/*Projects Section*/
 #Projects{
   padding-top:40px;
   padding-bottom:40px;
+  min-height:100vh;
 }
 
 #Projects .page-header{
@@ -51,43 +64,18 @@
   text-align:center;
 } 
 
-#Kobe{
-  width:100%;
-  height: auto;
+#Projects .thumbnail, #Kobe{
+  position:relative;
+  overflow:hidden;
+  height:300px;
+}
+
+/*Contact section*/
+#contact{
+   padding-top:40px;
+  padding-bottom:40px;
+  min-height:100vh;
 }
 
 
 
-
-
-
-
-
-/***************MEDIA QUERIES********************/
-/** 
- * iPad with portrait orientation.
- */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-  #Home{
-    height: 1024px;
-  }
-}
-
-/** 
- * iPad with landscape orientation.
- */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-  #Home{
-    height: 768px;
-  }
-}
-
-/**
- * iPhone 5
- * You can also target devices with aspect ratio.
- */
-@media screen and (device-aspect-ratio: 40/71) {
-  #Home{
-    height: 500px;
-  }
-}
