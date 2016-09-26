@@ -10,11 +10,11 @@
 </head>
 
 <body>
- <!--Begin Navigation-->
+<!--Begin Navigation-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
         <span class="sr-only">Toggle Navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -25,10 +25,10 @@
    
    <div class="navbar-collapse collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#AboutMe">About Me</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#Home" class="scroll">Home</a></li>
+        <li><a class="scroll" href="#AboutMe">About Me</a></li>
+        <li><a href="#Projects" class="scroll">Projects</a></li>
+        <li><a href="#contact" class="scroll">Contact</a></li>
       </ul>
      </div>
   </div>
@@ -53,32 +53,76 @@ Dont't forget to add links to the navigation->
  <div class="container-fluid site-container">
 
 <!--Begin about me!-->
-  
     <div class="row" id="AboutMe">
      <h2 class="page-header text-center">About Me</h2>
      <div class="col-sm-2"></div>
      <div class="col-sm-8">
        <img class="portrait img-circle img-responsive" src="https://rawgit.com/brandonntrann/resume/master/profilepic.jpg" alt="Profile Pic">
-     <p> Hello! My name is Brandon Tran and I'm a recent graduate from the beautiful University of California, Santa Barbara with a degree in Cell and Developmental Biology. While I'm no longer interested in pursuing a career science, I hope the research and analytical skills I acquired help me become a great UI/UX designer!</p>
-       <p>Other than that, you can catch me working out, having fun with my dogs, and screaming at the TV whenever the Laker's game is on!</p>
+     <p> Hello! My name is Brandon Tran and I'm a recent graduate from the beautiful University of California, Santa Barbara with a degree in Cell and Developmental Biology. While I'm no longer interested in pursuing a career science, I hope the research and analytical skills I acquired help me become a great UI/UX designer! Other than that, you can catch me working out, having fun with my dogs, and screaming at the TV whenever the Laker's game is on!</p>
      </div>                            
      <div class="col-sm-2"></div>
    </div>
-<!--End of About Me-->
+<!--End of About Me
+Don't forget to make better paragraph description...
+-->
    
 <!--Begin Projects-->
  <div id="Projects">
    <div class="row">
-     <div class="page-header text-center">Projects</div>
-     <div class="col-sm-4">
-     <h3>Kobe Bryant Tribute</h3>
-       <a href="https://codepen.io/brandonntrann/full/ZpLOPv/">
-         <img id="Kobe" src="https://raw.githubusercontent.com/brandonntrann/Portfolio/master/kobe_tribute_thumbnail.jpg"></img><a>
+     <div class="page-header text-center">Projects
+     </div>
+       <div class="col-sm-6 col-md-4">
+         <h3>Kobe Bryant Tribute</h3>
+          <div class="thumbnail">
+         <a href="https://codepen.io/brandonntrann/full/ZpLOPv/" target="_blank">
+         <img id="Kobe" class="img-responsive" src="https://raw.githubusercontent.com/brandonntrann/Portfolio/master/kobe_tribute_thumbnail.jpg"></img><a>
+        </div>
+         </div>
+         
+          <div class="col-sm-6 col-md-4">
+            <h3>Coming Soon</h3>
+             <div class="thumbnail">
+            <img id="future" src="http://karnanicorp.com/Images/COMING-SOON.jpg">
+         </div>
+         </div>
+            
+          <div class="col-sm-6 col-md-4">
+            <h3>Coming Soon</h3>
+             <div class="thumbnail">
+            <img id="future" src="http://karnanicorp.com/Images/COMING-SOON.jpg">
+         </div>
+         </div>
+         
+           <div class="col-sm-6 col-md-4">
+            <h3>Coming Soon</h3>
+             <div class="thumbnail">
+            <img id="future" src="http://karnanicorp.com/Images/COMING-SOON.jpg">
+         </div>
+         </div>
+         
+         
+           <div class="col-sm-6 col-md-4">
+            <h3>Coming Soon</h3>
+             <div class="thumbnail">
+            <img id="future" src="http://karnanicorp.com/Images/COMING-SOON.jpg">
+         </div>
+         </div>
+         
+            <div class="col-sm-6 col-md-4">
+            <h3>Coming Soon</h3>
+             <div class="thumbnail">
+            <img id="future" src="http://karnanicorp.com/Images/COMING-SOON.jpg">
+         </div>
+         </div>
+         
+         
      </div>
    </div>
+   
+   <!--Begin Contact Section-->
+   <div id="contact">
+     <h1 class="text-center">Contact</h2>
    </div>
-   
-   
    
    
    
@@ -88,6 +132,11 @@ Dont't forget to add links to the navigation->
    
    <!--End of container-fluid for all sections-->
   </div>
+  
+
+
+
+
   
 
 
@@ -107,6 +156,16 @@ Dont't forget to add links to the navigation->
   $('.navbar-collapse a').click(function(){
     $(".navbar-collapse").collapse('hide');
 });
+  
+  $(document).ready(function(){ 
+	$(".scroll").click(function(event){
+		event.preventDefault();
+		$("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
+		$('.navbar-inverse a').removeClass('selected');
+		$(this).addClass('selected');
+    	});
+});
+
    </script>
 </body>
 </html>
