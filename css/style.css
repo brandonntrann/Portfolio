@@ -1,23 +1,40 @@
+body
 
 .navbar-inverse .navbar-nav>li>a{
-  color:white;
+  color:#EFF3F3 ;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+  background:#0072b1;
+  
 }
 .navbar-inverse .navbar-nav>li>a.selected{
-  color:red;    /*DONT FORGET TO CHANGE TO BETTER COLOR AND UNDERSTAND HOW THE JQUERY WORKS!*/
+  background:#0072b1;    
 }
 
 /* Home Section */
 #Home{
-  background:url("http://eskipaper.com/images/snow-mountain-8.jpg") no-repeat center center;
+  background-attachment:fixed;
+  background:url("http://cdn.wallpapersafari.com/29/22/UNDju1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover
   -moz-background-size:cover;
   -o-background-size:cover;
   background-size:cover;
-  padding-top:100px;
+  padding-top:150px;
   padding-bottom:100px;
   margin-bottom:0px;
   overflow:hidden;
-  height:100vh;
+  min-height:100vh;
+  color:#EFF3F3     ;
+}
+
+#Home h1, h3 {
+   font-family:"Lobster", "Roboto", serif;
+}
+#Home h1{
+  font-size:100px;
+}
+#Home h3{
+  font-size:30px;
 }
 .site-container{
   max-width:100%';
@@ -27,38 +44,62 @@
 /*About Me section*/
 
 #AboutMe{
-  background:gray;
+  background:url("http://randomwallpapers.net/beautiful-beach-night-scenic-1920x1200-wallpaper320474.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
   padding-top:40px;
   padding-bottom:40px;
   min-height:100vh;
+  color:#EFF3F3  
 }
 
-#AboutMe .page-header{
-  font-size:30px;
+#AboutMe h2{
+  font-size:75px;
+  font-family:"Lobster", "Roboto", serif;
+  
+}
+#AboutMe .jumbotron{
+  background:	#154F65;
+  margin-top:20px;
+  background-image:url("http://www.psdgraphics.com/file/black-wood-background.jpg");
+  border-radius:20px;
 }
 
 #AboutMe p{
-  font-size:18px;
-  padding-top:10px;
-  padding-bottom:20px;
+  font-size:24px;
+ padding:20px;
   text-indent:50px;
+  font-family:"Francois One";
 }
   .portrait{
-  max-width:100%;
+  max-width:20%;
+  display:block;
   border-style:solid;
-  border-width:10px;
+  border-width:5px;
   margin:0 auto;
+  
 }
 
 /*Projects Section*/
 #Projects{
+  background:url("http://cdn.wallpapersafari.com/20/15/7Pt9T1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
   padding-top:40px;
   padding-bottom:40px;
   min-height:100vh;
+  color:#EFF3F3
+  
 }
 
 #Projects .page-header{
-  font-size:30px;
+  font-size:75px;
+  font-family:"Lobster", "Roboto", serif;
+  
 }
 #Projects h3{
   text-align:center;
@@ -69,13 +110,51 @@
   overflow:hidden;
   height:300px;
 }
+.thumbnail{
+  background:transparent;
+  border-color:transparent;
+}
 
 /*Contact section*/
 #contact{
    padding-top:40px;
   padding-bottom:40px;
   min-height:100vh;
+  background:url("http://99social.info/wp-content/uploads/2015/06/Background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  color:#EFF3F3
+}
+#contact .page-header{
+  font-size:75px;
+  font-family:"Lobster", "Roboto", serif;
 }
 
+#contact .link {
+  padding-top:150px;
+  padding-bottom:20px;
+}
+#contact .link .text-center{
+  font-size:25px;
+}
+#contact .link>a{
+    color:#EFF3F3;
+  text-decoration:none;
+}
+#contact .link>a:hover{
+  color:#007ee5;
+}
+
+#contact .social .fa:hover{
+  color:#EFF3F3;
+}
+
+
+@media only screen and (max-width: 500px) {
+        #Home, #AboutMe, #Projects, #contact{
+          height: 100%;
+    }
 
 
