@@ -7,9 +7,14 @@
   <link rel="stylesheet" text="style/css" href="https://rawgit.com/brandonntrann/Portfolio/master/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylehseet" type="text/css">
 </head>
 
 <body>
+
+
 <!--Begin Navigation-->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
@@ -20,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand">Brandon Tran</a>  
+      <a class="navbar-brand"></a>  
      </div>
    
    <div class="navbar-collapse collapse" id="myNavbar">
@@ -42,7 +47,8 @@ Dont't forget to add links to the navigation->
 <div class="jumbotron text-center" id="Home">
   <div class="container-fluid">
     <h1>Brandon Tran</h1>
-    <h4>______________________________________</h4>
+    <h4>______________________________________________________________</h4>
+    <h3>Designer. Biologist. Innovator.</h3>
   </div>
 </div>
   <!--Add background Image to Jumbotron-->
@@ -50,32 +56,37 @@ Dont't forget to add links to the navigation->
   
   <!--Container-Fluid for all sections. Remember to give it a class name to style later-->
   
- <div class="container-fluid site-container">
+
 
 <!--Begin about me!-->
-    <div class="row" id="AboutMe">
-     <h2 class="page-header text-center">About Me</h2>
-     <div class="col-sm-2"></div>
-     <div class="col-sm-8">
-       <img class="portrait img-circle img-responsive" src="https://rawgit.com/brandonntrann/resume/master/profilepic.jpg" alt="Profile Pic">
-     <p> Hello! My name is Brandon Tran and I'm a recent graduate from the beautiful University of California, Santa Barbara with a degree in Cell and Developmental Biology. While I'm no longer interested in pursuing a career science, I hope the research and analytical skills I acquired help me become a great UI/UX designer! Other than that, you can catch me working out, having fun with my dogs, and screaming at the TV whenever the Laker's game is on!</p>
-     </div>                            
-     <div class="col-sm-2"></div>
+   <div id="AboutMe">
+   <div class="container">
+        <h2 class="page-header text-center">About Me</h2>
+       <img class="portrait img-circle" src="https://rawgit.com/brandonntrann/resume/master/profilepic.jpg" alt="Profile Pic">
+        <div class="jumbotron">
+          <div class="row">
+     <p class="col-md-12"> Hello! My name is Brandon Tran and I'm a recent graduate from the tropical University of California, Santa Barbara with a degree in Cell and Developmental Biology. While I'm no longer interested in pursuing a career in science, I hope to my research and analytical skills I acquired and apply it to UI/UX design! </p>
+        </div>
+       </div>
+      </div>
+   </div>
+   </div>
    </div>
 <!--End of About Me
 Don't forget to make better paragraph description...
 -->
    
 <!--Begin Projects-->
- <div id="Projects">
-   <div class="row">
+   <div class="row" id="Projects">
+     
      <div class="page-header text-center">Projects
      </div>
+     
        <div class="col-sm-6 col-md-4">
          <h3>Kobe Bryant Tribute</h3>
           <div class="thumbnail">
          <a href="https://codepen.io/brandonntrann/full/ZpLOPv/" target="_blank">
-         <img id="Kobe" class="img-responsive" src="https://raw.githubusercontent.com/brandonntrann/Portfolio/master/kobe_tribute_thumbnail.jpg"></img><a>
+         <img id="Kobe" class="img-responsive" src="https://raw.githubusercontent.com/brandonntrann/Portfolio/master/kobe_tribute_thumbnail.jpg"></a>
         </div>
          </div>
          
@@ -114,35 +125,41 @@ Don't forget to make better paragraph description...
             <img id="future" src="http://karnanicorp.com/Images/COMING-SOON.jpg">
          </div>
          </div>
-         
-         
-     </div>
-   </div>
+        </div>
+   
+    
+   
    
    <!--Begin Contact Section-->
-   <div id="contact">
-     <h1 class="text-center">Contact</h2>
-   </div>
    
+
+     <div id="contact" class="text-center">
+       
+       
+       <h1 class="page-header text-center">Contact Me!</h1>
+          
+          <div class="container">
+          <div class="link"><a href="mailto:brandonduytran@gmail.com"><h4 class="text-center">brandonduytran@gmail.com</h4></a></div>
    
-   
-   
-   
-   
-   
-   <!--End of container-fluid for all sections-->
-  </div>
+          <div class="social">
+            <div class="row">
+              <div class="col-sm-12">
+           <a href="#" target="_blank"><i class="fa fa-facebook-official fa-4x"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-git-square fa-4x"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram fa-4x"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-linkedin-square fa-4x"></i></a>
+          <a href="#" target="_blank"><i class="fa fa-twitter-square fa-4x"></i></a>  
+              </div>
+          </div>
+         </div>
+       </div> 
+     </div>
   
-
-
-
-
-  
-
-
-
-
-
+   
+   
+   
+   
+   
 
 
 
@@ -156,8 +173,8 @@ Don't forget to make better paragraph description...
   $('.navbar-collapse a').click(function(){
     $(".navbar-collapse").collapse('hide');
 });
-  
-  $(document).ready(function(){ 
+
+$(document).ready(function(){ 
 	$(".scroll").click(function(event){
 		event.preventDefault();
 		$("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
@@ -165,6 +182,7 @@ Don't forget to make better paragraph description...
 		$(this).addClass('selected');
     	});
 });
+
 
    </script>
 </body>
